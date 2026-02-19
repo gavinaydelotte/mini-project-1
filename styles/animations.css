@@ -1,0 +1,12 @@
+/* Motion: transitions, reveal, hover effects */
+.listing article{transition:transform 300ms ease, box-shadow 300ms ease, opacity 400ms ease}
+.listing.in-view article{transform:none;opacity:1}
+.listing article{transform:translateY(10px);opacity:0}
+.listing:hover article{transform:translateY(-4px);box-shadow:0 10px 30px rgba(13,38,47,0.12)}
+
+@keyframes fadeInUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.reveal{animation:fadeInUp 460ms cubic-bezier(.2,.8,.2,1) both}
+
+/* subtle image zoom on hover */
+figure img{transition:transform 400ms ease}
+.listing:hover figure img{transform:scale(1.03)}

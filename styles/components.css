@@ -1,0 +1,44 @@
+/* Components: cards, buttons, tabs, search */
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(13,38,47,0.06);display:flex;flex-direction:column}
+.listing article{display:flex;flex-direction:column;height:100%}
+.meta{padding:0.75rem 1rem 1.25rem}
+.title{margin:0 0 0.25rem;font-size:1.05rem}
+.info{margin:0;color:var(--muted);font-size:0.95rem}
+.location{margin-top:0.5rem;font-size:0.9rem;color:#375b6a}
+
+.search{display:flex;gap:0.5rem;align-items:center;margin-top:1rem}
+.search input[type="search"]{flex:1;padding:0.6rem;border:1px solid #d7e3e9;border-radius:6px}
+.search select{padding:0.6rem;border:1px solid #d7e3e9;border-radius:6px;background:#fff}
+
+.tabs{display:flex;gap:0.5rem;margin:0.5rem 0 1rem}
+.tab{display:inline-block;padding:0.5rem 0.75rem;background:#fff;border:1px solid rgba(14,61,77,0.08);border-radius:6px;color:var(--accent);text-decoration:none}
+.tab.active,.tab[aria-current="true"]{background:var(--accent);color:var(--accent-contrast)}
+.tab:hover{background:#f0fbff}
+
+/* Dynamic hover/interaction for buttons (scale and lift) */
+@media (hover: hover) and (pointer: fine) {
+	.tab, .btn, .panel-close {
+		transition:transform 180ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms ease;
+		will-change: transform;
+	}
+
+	.tab:hover, .btn:hover {
+		transform: translateY(-3px) scale(1.04);
+	}
+
+	.tab:active, .btn:active { transform: translateY(-1px) scale(0.995); }
+
+	.panel-close:hover { transform: scale(1.08); }
+	.panel-close:active { transform: scale(0.98); }
+}
+
+.btn{display:inline-block;padding:0.5rem 0.75rem;border-radius:6px;background:var(--accent);color:var(--accent-contrast);text-decoration:none}
+
+/* Overlay / panel for showing all listings */
+.hidden{display:none !important}
+.tab-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,18,23,0.45);z-index:1200;padding:1rem}
+.tab-panel{background:var(--card);border-radius:12px;max-width:1000px;width:100%;max-height:90vh;overflow:auto;padding:1rem;position:relative;box-shadow:0 20px 60px rgba(2,18,23,0.35)}
+.panel-close{position:absolute;right:0.75rem;top:0.5rem;background:none;border:none;color:var(--muted);font-size:1.25rem;cursor:pointer}
+.tab-panel .container{padding-top:0.5rem}
+.listings-list{list-style:none;margin:0;padding:0}
+.listings-list li{padding:0.5rem 0;border-bottom:1px solid rgba(14,61,77,0.04)}

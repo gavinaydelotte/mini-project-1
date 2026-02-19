@@ -1,0 +1,19 @@
+/* Layout and structural rules */
+.site-header{background:#fff;border-bottom:1px solid rgba(14,61,77,0.06);position:sticky;top:0;z-index:50;transition:box-shadow 200ms ease}
+.site-header.scrolled{box-shadow:0 6px 20px rgba(13,38,47,0.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.nav{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav a{color:#153e4d;text-decoration:none}
+.hero{padding:2rem 1rem;text-align:left}
+.lead{color:var(--muted);margin-top:0.25rem}
+.listings-section{padding:1rem 0 3rem}
+.listings{list-style:none;margin:1rem 0 0;padding:0;display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+.site-footer{background:#fff;border-top:1px solid rgba(14,61,77,0.06);padding:1rem 0;margin-top:2rem}
+
+@media(min-width:640px){
+  .listings{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:980px){
+  .listings{grid-template-columns:repeat(3,1fr)}
+}

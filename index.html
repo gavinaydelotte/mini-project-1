@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Tidemark Vacation Rentals — Stuart, FL</title>
   <meta name="description" content="Curated VRBO and Airbnb vacation rentals in Stuart, Florida. Browse beachfront homes, cottages, and condos.">
   <link rel="stylesheet" href="styles/base.css">
@@ -77,8 +77,10 @@
       document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>140);
     },{passive:true});
 
-    // Subtle parallax on the beach banner and logo (same 0.175 multiplier)
+    // Parallax: skip on touch devices (iOS Safari repaints background-position off the GPU,
+    // causing jank during momentum scrolling)
     (function(){
+      if(window.matchMedia('(hover:none) and (pointer:coarse)').matches) return;
       var banner = document.querySelector('.parallax-banner');
       if(!banner) return;
       var logo = banner.querySelector('.parallax-logo');

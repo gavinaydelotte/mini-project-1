@@ -43,7 +43,7 @@
 /* Overlay / panel for showing all listings */
 .hidden{display:none !important}
 .tab-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,18,23,0.45);z-index:1200;padding:1rem}
-.tab-panel{background:var(--card);border-radius:12px;max-width:1000px;width:100%;max-height:90vh;overflow:auto;padding:1rem;position:relative;box-shadow:0 20px 60px rgba(2,18,23,0.35)}
+.tab-panel{background:var(--card);border-radius:12px;max-width:1000px;width:100%;max-height:90vh;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:1rem;position:relative;box-shadow:0 20px 60px rgba(2,18,23,0.35)}
 .panel-close{position:absolute;right:0.75rem;top:0.5rem;background:none;border:none;color:var(--muted);font-size:1.25rem;cursor:pointer}
 .tab-panel .container{padding-top:0.5rem}
 .listings-list{list-style:none;margin:0;padding:0}

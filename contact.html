@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Tidemark Vacation Rentals</title>
+  <meta name="description" content="Get in touch with Tidemark Vacation Rentals in Stuart, Florida.">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left" aria-label="Primary navigation">
+        <ul class="nav">
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News &amp; Resources</a></li>
+        </ul>
+      </nav>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Tidemark Vacation Rentals" class="logo">
+      </a>
+      <nav class="nav-right" aria-label="Secondary navigation">
+        <ul class="nav">
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="https://tidemarkpropertygroup.com" target="_blank" rel="noopener noreferrer">Property Group</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Contact Us</h1>
+      <p class="lead">Questions about a listing or the Stuart, FL area? We'd love to hear from you.</p>
+    </section>
+
+    <section class="container contact-section">
+      <div class="contact-info">
+        <p><strong>Location:</strong> Stuart, FL — Treasure Coast</p>
+        <p><strong>Email:</strong> <a href="mailto:info@tidemarkpropertygroup.com">info@tidemarkpropertygroup.com</a></p>
+      </div>
+
+      <form class="contact-form" action="#" method="post" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us what you're looking for..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© TideMark Property Group — Stuart, FL</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll',function(){
+      document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>140);
+    },{passive:true});
+  </script>
+</body>
+</html>

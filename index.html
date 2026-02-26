@@ -3,197 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Stuart, FL — VRBO & Airbnb Listings</title>
+  <title>Tidemark Vacation Rentals — Stuart, FL</title>
   <meta name="description" content="Curated VRBO and Airbnb vacation rentals in Stuart, Florida. Browse beachfront homes, cottages, and condos.">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/components.css">
   <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">TideMark Rentals — Stuart, FL</a>
-      <nav aria-label="Main navigation">
+      <nav class="nav-left" aria-label="Primary navigation">
         <ul class="nav">
-          <li><a href="#listings">Listings</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News &amp; Resources</a></li>
+        </ul>
+      </nav>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Tidemark Vacation Rentals" class="logo">
+      </a>
+      <nav class="nav-right" aria-label="Secondary navigation">
+        <ul class="nav">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://tidemarkpropertygroup.com" target="_blank" rel="noopener noreferrer">Property Group</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <h1>Vacation Rentals in Stuart, Florida</h1>
-      <p class="lead">Hand-picked VRBO and Airbnb properties — waterfront, family-friendly, and pet-friendly options.</p>
-      <form class="search" role="search" aria-label="Search listings">
-        <label for="q" class="visually-hidden">Search listings</label>
-        <input id="q" name="q" type="search" placeholder="Search by neighborhood, feature, or name">
-        <select id="provider" aria-label="Provider filter">
-          <option value="all">All providers</option>
-          <option value="vrbo">VRBO</option>
-          <option value="airbnb">Airbnb</option>
-        </select>
-      </form>
-    </section>
-
-    <section id="listings" class="container listings-section">
-      <h2>Available Rentals</h2>
-      <p class="muted">Showing curated results for Stuart, FL. Click a listing to view the original posting.</p>
-
-      <div class="tabs" role="tablist" aria-label="View all listings tabs">
-        <button class="tab" type="button" data-target="panel-all-listings">All Listings</button>
-        <button class="tab" type="button" data-target="panel-all-vrbo">All VRBO</button>
-        <button class="tab" type="button" data-target="panel-all-airbnb">All Airbnb</button>
-      </div>
-
-      <ul class="listings" id="listingsGrid">
-        <!-- Sample listing 1 -->
-        <li class="listing" data-provider="vrbo">
-          <article>
-            <a href="https://www.vrbo.com/" target="_blank" rel="noopener noreferrer">
-              <figure>
-                <img src="https://via.placeholder.com/600x375.png?text=Beach+House" alt="Front view of BEACHFRONT Cottage">
-                <figcaption>Beachfront Cottage — VRBO</figcaption>
-              </figure>
-              <div class="meta">
-                <h3 class="title">Beachfront Cottage</h3>
-                <p class="info">2 beds • 2 baths • Sleeps 4 — from $175/night</p>
-                <p class="location">Stuart, FL — Hutchinson Island</p>
-              </div>
-            </a>
-          </article>
-        </li>
-
-        <!-- Sample listing 2 -->
-        <li class="listing" data-provider="airbnb">
-          <article>
-            <a href="https://www.airbnb.com/" target="_blank" rel="noopener noreferrer">
-              <figure>
-                <img src="https://via.placeholder.com/600x375.png?text=Riverfront+Home" alt="Riverfront home exterior">
-                <figcaption>Riverfront Home — Airbnb</figcaption>
-              </figure>
-              <div class="meta">
-                <h3 class="title">Riverfront Home</h3>
-                <p class="info">3 beds • 2 baths • Sleeps 6 — from $220/night</p>
-                <p class="location">Stuart, FL — Downtown</p>
-              </div>
-            </a>
-          </article>
-        </li>
-
-        <!-- Sample listing 3 -->
-        <li class="listing" data-provider="vrbo">
-          <article>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <figure>
-                <img src="https://via.placeholder.com/600x375.png?text=Cozy+Cottage" alt="Cozy cottage garden view">
-                <figcaption>Cozy Cottage — VRBO</figcaption>
-              </figure>
-              <div class="meta">
-                <h3 class="title">Cozy Cottage</h3>
-                <p class="info">1 bed • 1 bath • Sleeps 2 — from $95/night</p>
-                <p class="location">Stuart, FL — Near Riverwalk</p>
-              </div>
-            </a>
-          </article>
-        </li>
-
-        <!-- Sample listing 4 -->
-        <li class="listing" data-provider="airbnb">
-          <article>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <figure>
-                <img src="https://via.placeholder.com/600x375.png?text=Island+Condo" alt="Condo with balcony view">
-                <figcaption>Island Condo — Airbnb</figcaption>
-              </figure>
-              <div class="meta">
-                <h3 class="title">Island Condo</h3>
-                <p class="info">2 beds • 2 baths • Sleeps 5 — from $140/night</p>
-                <p class="location">Stuart, FL — Sewall's Point</p>
-              </div>
-            </a>
-          </article>
-        </li>
-
-      </ul>
-    </section>
-
-    <div id="tabOverlay" class="tab-overlay hidden" role="dialog" aria-modal="true" aria-hidden="true">
-      <div class="tab-panel" id="panel-all-listings" role="tabpanel" tabindex="0">
-        <button class="panel-close" aria-label="Close">✕</button>
-        <div class="container">
-          <h2>All Listings</h2>
-          <p class="muted">All listings for Stuart, FL.</p>
-          <ul class="listings-list">
-            <li class="muted">No listings yet.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tab-panel hidden" id="panel-all-vrbo" role="tabpanel" tabindex="0">
-        <button class="panel-close" aria-label="Close">✕</button>
-        <div class="container">
-          <h2>All VRBO Listings</h2>
-          <p class="muted">All VRBO listings for Stuart, FL.</p>
-          <ul class="listings-list">
-            <li class="muted">No listings yet.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tab-panel hidden" id="panel-all-airbnb" role="tabpanel" tabindex="0">
-        <button class="panel-close" aria-label="Close">✕</button>
-        <div class="container">
-          <h2>All Airbnb Listings</h2>
-          <p class="muted">All Airbnb listings for Stuart, FL.</p>
-          <ul class="listings-list">
-            <li class="muted">No listings yet.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="parallax-banner">
+      <img src="images/logowhite.png" alt="Tidemark Vacation Rentals" class="parallax-logo">
     </div>
 
-    <section id="about" class="container about">
-      <h2>About</h2>
-      <p>Listings are curated for convenience. This page provides quick links to VRBO and Airbnb postings in Stuart, FL.</p>
+    <section class="hero home-hero container">
+      <h1>Vacation Rentals in Stuart, Florida</h1>
+      <p class="lead">Hand-picked VRBO and Airbnb properties — waterfront, family-friendly, and pet-friendly options.</p>
+      <a href="listings.html" class="btn-primary">Browse Listings</a>
     </section>
 
+    <section class="home-teaser container">
+      <h2>Looking for a Longer Stay?</h2>
+      <p class="lead">If you're considering making the Treasure Coast your permanent home, Tidemark Property Group has an expertly curated selection of homes for sale in Stuart and the surrounding area.</p>
+      <a href="https://tidemarkpropertygroup.com/homes-for-sale/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:100%;box-sizing:border-box">View Homes for Sale</a>
+    </section>
   </main>
 
-  <footer id="contact" class="site-footer">
+  <div class="map-section">
+    <iframe
+      title="Stuart, FL map"
+      src="https://www.google.com/maps?q=Florida+Commercial+Real+Estate+309+SE+Osceola+St+Stuart+FL+34994&output=embed&z=17"
+      width="100%"
+      height="280"
+      style="border:0;display:block"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <footer class="site-footer">
     <div class="container footer-inner">
       <p>© TideMark Property Group — Stuart, FL</p>
-      <p class="muted">Built with semantic HTML and responsive CSS inspired by tidemarkpropertygroup.com</p>
     </div>
   </footer>
 
-  <script src="scripts/main.js" defer></script>
   <script>
-    // Simple client-side filtering by provider and text
+    window.addEventListener('scroll',function(){
+      document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>140);
+    },{passive:true});
+
+    // Subtle parallax on the beach banner and logo (same 0.15 multiplier)
     (function(){
-      const q = document.getElementById('q');
-      const provider = document.getElementById('provider');
-      const grid = document.getElementById('listingsGrid');
-
-      function filter(){
-        const term = q.value.trim().toLowerCase();
-        const prov = provider.value;
-        Array.from(grid.querySelectorAll('.listing')).forEach(li => {
-          const title = li.querySelector('.title').textContent.toLowerCase();
-          const info = li.querySelector('.info').textContent.toLowerCase();
-          const matchesText = !term || title.includes(term) || info.includes(term);
-          const matchesProv = prov === 'all' || li.dataset.provider === prov;
-          li.style.display = (matchesText && matchesProv) ? '' : 'none';
-        });
+      var banner = document.querySelector('.parallax-banner');
+      if(!banner) return;
+      var logo = banner.querySelector('.parallax-logo');
+      function tick(){
+        var rect = banner.getBoundingClientRect();
+        var centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
+        var shift = (centerOffset * 0.16).toFixed(1);
+        banner.style.backgroundPositionY = 'calc(50% + ' + shift + 'px)';
+        if(logo) logo.style.transform = 'translate(-50%, calc(-50% + ' + shift + 'px))';
       }
-
-      q.addEventListener('input', filter);
-      provider.addEventListener('change', filter);
+      window.addEventListener('scroll', tick, {passive:true});
+      tick();
     })();
   </script>
 </body>

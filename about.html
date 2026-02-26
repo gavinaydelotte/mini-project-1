@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Tidemark Vacation Rentals</title>
+  <meta name="description" content="Learn about Tidemark Vacation Rentals — curated VRBO and Airbnb listings in Stuart, Florida.">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left" aria-label="Primary navigation">
+        <ul class="nav">
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="news.html">News &amp; Resources</a></li>
+        </ul>
+      </nav>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Tidemark Vacation Rentals" class="logo">
+      </a>
+      <nav class="nav-right" aria-label="Secondary navigation">
+        <ul class="nav">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://tidemarkpropertygroup.com" target="_blank" rel="noopener noreferrer">Property Group</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>About Us</h1>
+      <p class="lead">Connecting visitors with the best vacation rentals in Stuart, Florida.</p>
+    </section>
+
+    <section class="container about">
+      <p>Tidemark Vacation Rentals curates hand-picked VRBO and Airbnb properties across Stuart, FL and the surrounding Treasure Coast area. Our listings highlight waterfront homes, family-friendly cottages, and pet-friendly condos — all sourced from trusted platforms.</p>
+      <p>This site provides quick links to verified postings so you can find and book your perfect getaway without the hassle of sifting through hundreds of results.</p>
+      <p>Stuart, FL sits along the St. Lucie River and is known as the "Sailfish Capital of the World." Whether you're after the beach, the waterway, or the charming downtown, there's a rental here for you.</p>
+      <a href="listings.html" class="btn-primary" style="display:inline-block;margin-top:1.5rem">Browse Listings</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© TideMark Property Group — Stuart, FL</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll',function(){
+      document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>140);
+    },{passive:true});
+  </script>
+</body>
+</html>

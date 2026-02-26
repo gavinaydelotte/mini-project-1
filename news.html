@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>News &amp; Resources — Tidemark Vacation Rentals</title>
+  <meta name="description" content="News and resources for vacation rentals and Stuart, Florida travel.">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav-left" aria-label="Primary navigation">
+        <ul class="nav">
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html" aria-current="page">News &amp; Resources</a></li>
+        </ul>
+      </nav>
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Tidemark Vacation Rentals" class="logo">
+      </a>
+      <nav class="nav-right" aria-label="Secondary navigation">
+        <ul class="nav">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://tidemarkpropertygroup.com" target="_blank" rel="noopener noreferrer">Property Group</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>News &amp; Resources</h1>
+      <p class="lead">Tips, updates, and local guides for visiting Stuart, Florida.</p>
+    </section>
+
+    <section class="container news-section">
+      <p class="muted">No posts yet — check back soon.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© TideMark Property Group — Stuart, FL</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll',function(){
+      document.querySelector('.site-header').classList.toggle('scrolled',window.scrollY>140);
+    },{passive:true});
+  </script>
+</body>
+</html>

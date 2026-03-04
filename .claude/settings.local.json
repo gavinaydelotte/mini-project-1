@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:tidemarkpropertygroup.com)"
+      "WebFetch(domain:tidemarkpropertygroup.com)",
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)",
+      "Bash(powershell -Command \":*)"
     ]
   }
 }

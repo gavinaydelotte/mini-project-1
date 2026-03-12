@@ -4,7 +4,10 @@
       "WebFetch(domain:tidemarkpropertygroup.com)",
       "Bash(python3 -c \":*)",
       "Bash(node -e \":*)",
-      "Bash(powershell -Command \":*)"
+      "Bash(powershell -Command \":*)",
+      "Bash(sed -i 's|&output=embed&z=14\"\"|&output=embed\\\\&z=14\\\\&t=k\"\"|g' \"c:/Users/gaydelotte1/Documents/GitHub/tidemarkvrbo/properties/coastal-cottage-jensen-beach.html\" \"c:/Users/gaydelotte1/Documents/GitHub/tidemarkvrbo/properties/herons-nest-jensen-beach.html\" \"c:/Users/gaydelotte1/Documents/GitHub/tidemarkvrbo/properties/tropical-gem-stuart.html\")",
+      "Bash(sed -i 's|&output=embed&z=15\"\"|&output=embed\\\\&z=15\\\\&t=k\"\"|g' \"c:/Users/gaydelotte1/Documents/GitHub/tidemarkvrbo/properties/fishing-music-paradise.html\")",
+      "Bash(grep -n \"maps.google\" c:/Users/gaydelotte1/Documents/GitHub/tidemarkvrbo/properties/*.html)"
     ]
   }
 }
